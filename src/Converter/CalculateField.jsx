@@ -65,8 +65,8 @@ export default function CalculateField({ selectedItems, units, data }) {
             value={leftInputValue}
             className={
               flow === "right"
-                ? "border-slate-950 outline-none px-2 text-2xl w-full h-16"
-                : "border-slate-950 border-t-4 outline-none px-2 text-2xl w-full h-16"
+                ? "border-yellow-600 e-950 outline-none px-2 text-2xl w-full h-16"
+                : "border-yellow-600 border-t-4 outline-none px-2 text-2xl w-full h-16"
             }
             type="text"
           />
@@ -84,7 +84,7 @@ export default function CalculateField({ selectedItems, units, data }) {
         </div>
 
         {/* Equals Sign */}
-        <p className="text-3xl self-center"> = </p>
+        <p className="text-3xl self-center text-yellow-500"> = </p>
 
         {/* Right Input and Select */}
         <div className="w-1/2">
@@ -94,8 +94,8 @@ export default function CalculateField({ selectedItems, units, data }) {
             value={rightInputValue}
             className={
               flow === "left"
-                ? "border-slate-950 outline-none px-2 text-2xl w-full h-16"
-                : "border-slate-950 border-t-4 outline-none px-2 text-2xl w-full h-16"
+                ? "border-yellow-600 outline-none px-2 text-2xl w-full h-16"
+                : "border-yellow-600 border-t-4 outline-none px-2 text-2xl w-full h-16"
             }
             type="text"
           />{" "}
@@ -117,7 +117,7 @@ export default function CalculateField({ selectedItems, units, data }) {
       {
         <p>
           <span className="bg-yellow-600 p-1 rounded-sm mr-2 text-white">Formula: </span>
-          {data[selectedItems].variants[variantsName]?.formula}
+           <span className="text-white">{data[selectedItems].variants[variantsName]?.formula}</span>
         </p>
       }
     </div>
